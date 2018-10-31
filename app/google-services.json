@@ -1,0 +1,58 @@
+{
+  "project_info": {
+    "project_number": "781916096179",
+    "firebase_url": "https://friendlychat-c29eb.firebaseio.com",
+    "project_id": "friendlychat-c29eb",
+    "storage_bucket": "friendlychat-c29eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:781916096179:android:749e42e2f765f9a1",
+        "android_client_info": {
+          "package_name": "com.example.zizoj.instaclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "781916096179-njthvap3bcpgdf5vua611jtpb7qjl4ri.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.zizoj.instaclone",
+            "certificate_hash": "b5bf5f344472374ccd68d43015521ec3384cff57"
+          }
+        },
+        {
+          "client_id": "781916096179-elqq70860htnd2llt7c6c4n1lahibau0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdUYqTHiOScNSnA7zkyrnZQtLpMB3erJA"
+        },
+        {
+          "current_key": "AIzaSyBNjGdXqpr_Rj1yFidasLueSExRoRf6IPg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "781916096179-elqq70860htnd2llt7c6c4n1lahibau0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
