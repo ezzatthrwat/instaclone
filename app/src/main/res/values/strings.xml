@@ -5,6 +5,7 @@
     <string name="edit_profile_fragment">Edit Profile</string>
     <string name="sign_out_fragment">Sign Out</string>
     <string name="profile_fragment">Profile</string>
+    <string name="view_post_fragment">View Post</string>
 
 
     <!-- dialog names -->
@@ -47,6 +48,12 @@
     <!-- photo types -->
     <string name="new_photo">new_photo</string>
     <string name="profile_photo">profile_photo</string>
+
+
+    <!-- Bundle arg names -->
+    <string name="activity_number">activity_number</string>
+
+
 
 
 </resources>

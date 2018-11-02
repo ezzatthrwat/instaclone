@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -46,6 +47,13 @@ public class ProfileFragment extends Fragment {
     private static final int ACTIVITY_NUM = 4;
     private static final int NUM_GRID_COLUMNS = 3;
 
+    public interface OnGridImageSelectedListener{
+
+        void onGridImageSelected(Photo photo , int ActivityNumber);
+
+    }
+
+    OnGridImageSelectedListener mOnGridImageSelectedListener;
 
     private TextView mPosts, mFollowers, mFollowing, mDisplayName, mUsername, mWebsite, mDescription , TextEditeProfile;
 
@@ -113,6 +121,18 @@ public class ProfileFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void onAttach(Context context) {
+
+        try{
+
+            mOnGridImageSelectedListener = (OnGridImageSelectedListener) getActivity();
+        }catch (ClassCastException e){
+
+        }
+        super.onAttach(context);
+    }
+
     private void setupGridView(){
         Log.d(TAG, "setupGridView: Setting up image grid.");
 
@@ -153,6 +173,14 @@ public class ProfileFragment extends Fragment {
                         "", imgUrls);
 
                 gridView.setAdapter(adapter);
+
+                gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                        mOnGridImageSelectedListener.onGridImageSelected(photos.get(i), ACTIVITY_NUM);
+                    }
+                });
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {

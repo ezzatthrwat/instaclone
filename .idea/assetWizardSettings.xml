@@ -34,8 +34,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="C:\Users\zizoj\Desktop\speechbubble.png" />
-                                      <entry key="outputName" value="ic_speech_bubble" />
+                                      <entry key="imageAsset" value="C:\Users\zizoj\Desktop\insta.png" />
+                                      <entry key="outputName" value="ic_instagram_black" />
                                       <entry key="theme" value="CUSTOM" />
                                       <entry key="themeColor" value="000000" />
                                     </map>
