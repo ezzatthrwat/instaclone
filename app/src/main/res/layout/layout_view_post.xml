@@ -21,7 +21,7 @@
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:id="@+id/profile_photo"
+                    android:id="@+id/profile_photo_post"
                     android:layout_marginTop="20dp"
                     app:civ_border_color="@color/black"
                     app:civ_border_width="0.5dp"
@@ -34,7 +34,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:text="mitch.tabian"
-                    android:layout_toRightOf="@+id/profile_photo"
+                    android:layout_toRightOf="@+id/profile_photo_post"
                     android:layout_marginLeft="10dp"
                     android:layout_centerVertical="true"
                     android:id="@+id/username"
@@ -64,7 +64,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:id="@+id/relLayout2"
-                android:layout_below="@+id/post_image">
+                android:layout_below="@+id/post_image"
+                android:background="@color/white">
                 <RelativeLayout
                     android:layout_width="60dp"
                     android:layout_height="match_parent"
@@ -84,7 +85,7 @@
                         android:id="@+id/image_heart"
                         android:layout_centerInParent="true"
                         android:layout_marginLeft="20dp"
-                        android:src="@drawable/ic_heart_outline"
+                        android:src="@drawable/ic_heart_white"
                         android:visibility="visible"/>
                 </RelativeLayout>
                 <ImageView
@@ -103,7 +104,8 @@
                 android:id="@+id/relLayout3"
                 android:layout_below="@+id/relLayout2"
                 android:padding="20dp"
-                android:layout_marginBottom="50dp">
+                android:layout_marginBottom="50dp"
+                android:background="@color/white">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

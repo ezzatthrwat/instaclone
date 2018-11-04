@@ -156,8 +156,13 @@ public class GalleryFragment extends Fragment {
         gridView.setAdapter(adapter);
 
 
-        setImage(imgURLS.get(0), galleryImage, mAppend);
-        mSelectedImage = imgURLS.get(0);
+        try {
+            setImage(imgURLS.get(0), galleryImage, mAppend);
+            mSelectedImage = imgURLS.get(0);
+        }catch (ArrayIndexOutOfBoundsException e){
+
+        }
+
 
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

@@ -11,7 +11,7 @@ import android.widget.ProgressBar;
 
 import com.example.zizoj.instaclone.Models.Photo;
 import com.example.zizoj.instaclone.R;
-import com.example.zizoj.instaclone.ViewPostFragment;
+import com.example.zizoj.instaclone.Utils.ViewPostFragment;
 
 public class ProfileActivity extends AppCompatActivity implements ProfileFragment.OnGridImageSelectedListener {
 

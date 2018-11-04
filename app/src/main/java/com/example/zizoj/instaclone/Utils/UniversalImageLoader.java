@@ -30,6 +30,7 @@ public class UniversalImageLoader {
                 .showImageOnLoading(defaultImage)
                 .showImageForEmptyUri(defaultImage)
                 .showImageOnFail(defaultImage)
+                .considerExifParams(true)
                 .cacheOnDisk(true).cacheInMemory(true)
                 .cacheOnDisk(true).resetViewBeforeLoading(true)
                 .imageScaleType(ImageScaleType.EXACTLY)
@@ -55,8 +56,11 @@ public class UniversalImageLoader {
 
     public static void setImage(String imgURL , ImageView image , final ProgressBar mProgressBar , String append){
 
+
+
+
         ImageLoader  imageLoader = ImageLoader.getInstance();
-        imageLoader.displayImage(append + imgURL, image, new ImageLoadingListener() {
+        imageLoader.displayImage(append + imgURL , image, new ImageLoadingListener() {
             @Override
             public void onLoadingStarted(String imageUri, View view) {
                 if(mProgressBar != null){

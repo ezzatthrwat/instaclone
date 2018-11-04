@@ -404,7 +404,8 @@ public class FirebaseMethods {
                 0,
                 "",
                 StringManipulation.condenseUsername(username),
-                website);
+                website,
+                userID);
 
         mDatabaseReference.child(mContext.getString(R.string.dbname_users_account_setting))
                 .child(userID)

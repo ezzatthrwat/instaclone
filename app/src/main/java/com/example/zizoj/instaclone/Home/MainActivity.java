@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onCreat: Starting.");
 
 
+
         setupFirebaseAuth();
         initImageLoader();
         setupBottomNavigationView();
