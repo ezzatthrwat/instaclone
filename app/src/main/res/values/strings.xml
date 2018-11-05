@@ -60,6 +60,7 @@
     <!-- Bundle arg names -->
     <string name="activity_number">activity_number</string>
     <string name="field_likes">likes</string>
+    <string name="view_comments_fragment">View Comments</string>
 
 
 </resources>

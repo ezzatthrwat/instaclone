@@ -11,9 +11,11 @@ import android.widget.ProgressBar;
 
 import com.example.zizoj.instaclone.Models.Photo;
 import com.example.zizoj.instaclone.R;
+import com.example.zizoj.instaclone.Utils.ViewCommentsFragment;
 import com.example.zizoj.instaclone.Utils.ViewPostFragment;
 
-public class ProfileActivity extends AppCompatActivity implements ProfileFragment.OnGridImageSelectedListener {
+public class ProfileActivity extends AppCompatActivity implements ProfileFragment.OnGridImageSelectedListener ,
+ViewPostFragment.OnCommentThreadSelectedListener{
 
     private static final String TAG = "ProfileActivity";
 
@@ -32,6 +34,23 @@ public class ProfileActivity extends AppCompatActivity implements ProfileFragmen
         transaction.commit();
 
     }
+
+    @Override
+    public void onCommentThreadSelectedListener(Photo photo) {
+
+        ViewCommentsFragment fragment = new ViewCommentsFragment();
+        Bundle args = new Bundle();
+        args.putParcelable(getString(R.string.photo), photo);
+
+
+        fragment.setArguments(args);
+        FragmentTransaction transaction  = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.containerprofile, fragment);
+        transaction.addToBackStack(getString(R.string.view_comments_fragment));
+        transaction.commit();
+    }
+
+
     private static final int ACTIVITY_NUM = 4;
     private static final int NUM_GRID_COLUMNS = 3;
 
@@ -60,9 +79,6 @@ public class ProfileActivity extends AppCompatActivity implements ProfileFragmen
         transaction.addToBackStack(getString(R.string.profile_fragment));
         transaction.commit();
     }
-
-
-
 
 
 
