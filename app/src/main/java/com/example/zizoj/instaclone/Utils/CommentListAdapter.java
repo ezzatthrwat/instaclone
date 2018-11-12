@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.example.zizoj.instaclone.Models.Comment;
 import com.example.zizoj.instaclone.Models.UsersAccountSettings;
 import com.example.zizoj.instaclone.R;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -36,6 +37,14 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class CommentListAdapter extends ArrayAdapter<Comment> {
 
     private static final String TAG = "CommentListAdapter";
+
+    //firebase
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
+    private FirebaseDatabase mFirebaseDatabase;
+    private DatabaseReference myRef;
+    private FirebaseMethods mFirebaseMethods;
+
 
 
     private LayoutInflater mInflater;
@@ -71,6 +80,7 @@ public class CommentListAdapter extends ArrayAdapter<Comment> {
             holder.timestamp = (TextView) convertView.findViewById(R.id.comment_time_posted);
             holder.reply = (TextView) convertView.findViewById(R.id.comment_reply);
             holder.like = (ImageView) convertView.findViewById(R.id.comment_like);
+            holder.likes = (TextView) convertView.findViewById(R.id.comment_likes);
             holder.profileImage = (CircleImageView) convertView.findViewById(R.id.comment_profile_image);
 
             convertView.setTag(holder);

@@ -1,6 +1,9 @@
 package com.example.zizoj.instaclone.Models;
 
-public class UsersAccountSettings {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class UsersAccountSettings implements Parcelable {
 
     private String description;
     private String display_name;
@@ -27,6 +30,30 @@ public class UsersAccountSettings {
 
     public UsersAccountSettings() {
     }
+
+    protected UsersAccountSettings(Parcel in) {
+        description = in.readString();
+        display_name = in.readString();
+        followers = in.readLong();
+        following = in.readLong();
+        posts = in.readLong();
+        profile_photo = in.readString();
+        username = in.readString();
+        website = in.readString();
+        user_id = in.readString();
+    }
+
+    public static final Creator<UsersAccountSettings> CREATOR = new Creator<UsersAccountSettings>() {
+        @Override
+        public UsersAccountSettings createFromParcel(Parcel in) {
+            return new UsersAccountSettings(in);
+        }
+
+        @Override
+        public UsersAccountSettings[] newArray(int size) {
+            return new UsersAccountSettings[size];
+        }
+    };
 
     public String getUser_id() {
         return user_id;
@@ -113,5 +140,23 @@ public class UsersAccountSettings {
                 ", username='" + username + '\'' +
                 ", website='" + website + '\'' +
                 '}';
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(description);
+        parcel.writeString(display_name);
+        parcel.writeLong(followers);
+        parcel.writeLong(following);
+        parcel.writeLong(posts);
+        parcel.writeString(profile_photo);
+        parcel.writeString(username);
+        parcel.writeString(website);
+        parcel.writeString(user_id);
     }
 }

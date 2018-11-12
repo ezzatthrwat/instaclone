@@ -45,7 +45,7 @@ public class AccountSettingActivity extends AppCompatActivity{
 
         mcontext = AccountSettingActivity.this;
 
-        mviewPager = (ViewPager)findViewById(R.id.container);
+        mviewPager = (ViewPager)findViewById(R.id.viewpager_container);
         mRelativeLayout = (RelativeLayout)findViewById(R.id.relLayout1);
 
         setupBottomNavigationView();
